@@ -1,7 +1,5 @@
 ![Tasks and Invoices](https://raw.githubusercontent.com/gmarini/tasks-invoices/master/docs/images/rrails.jpg "Tasks and Invoices")
 
-Tasks And Invoices
-==================
 
 # Table of Contents
 
