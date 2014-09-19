@@ -1,4 +1,4 @@
-![Tasks and Invoices]https://github.com/gmarini/tasks-invoices/docs/images/rrails.jpg "Tasks and Invoices")
+![Tasks and Invoices](https://raw.githubusercontent.com/gmarini/tasks-invoices/master/docs/images/rrails.jpg "Tasks and Invoices")
 
 Tasks And Invoices
 ==================
@@ -27,14 +27,18 @@ Once the task is saved the owner of the site gets an email with this information
 	`rails new tasks-invoices`
 
 2.  We have to add all the gems that we will need in the Gemfile on the root directory
-		gem 'haml'
-		gem 'simple_form'
-		gem 'bootstrap-sass', '~> 3.2.0'
-		gem 'sass-rails', '~> 4.0.3'
+	```
+	gem 'haml'
+	gem 'simple_form'
+	gem 'bootstrap-sass', '~> 3.2.0'
+	gem 'sass-rails', '~> 4.0.3'
+	```
 3. 	Run `bundle install` to download and install all the gems file that we don't have installed yet.
 
 4. 	We are going to have a simple database schema
-	![Database diagram]https://github.com/gmarini/tasks-invoices/docs/images/simple-database.jpg "Database")
+5. 	
+	![Database diagram](https://raw.githubusercontent.com/gmarini/tasks-invoices/master/docs/images/simple-database.jpg "Database")
+
 	Now we need to create all the models
 		rails generate model Task title:string note:text deadline:datetime completed:datetime
 		rails generate model Job task:references summary:string description:text start:datetime finish:datetime rate:float
