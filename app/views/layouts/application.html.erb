@@ -2,13 +2,26 @@
 <html>
 <head>
   <title>TasksInvoices</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="row-fluid">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="jumbotron">
+				<h1>Task-Invoice<h1>
+				<p>Welcome to the Task-Invoice application</p>
+				<%= link_to 'New task', new_task_path, class: 'btn btn-primary', remote: true %>
+			</div>
+		</div>
+	</div>
 
-<%= yield %>
+		<%= yield %>
+
+		<footer>			
+		</footer>
+	</div>
 
 </body>
 </html>

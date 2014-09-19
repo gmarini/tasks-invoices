@@ -42,7 +42,15 @@ Once the task is saved the owner of the site gets an email with this information
 		rails generate model Job task:references summary:string description:text start:datetime finish:datetime rate:float
 	And we have to add  the directives `null: false, default: ""` to title and note in the tasks table and in summary in the jobs table as well as `default: ""` in description and `index: true` in task.
 	After that we need to generate a migration: `rake db:migrate`.
-5. 	
+5. 	Create the controllers for the pages
+		`rails generate controller Pages home about`
+	Then put `root 'pages#home'` in the routes.rb files
+6. 	Add `@import 'bootstrap';` at the end of the application.css, then add .scss to the end of the name of the file and add `//= require bootstrap` after the jquery directives and before the tree directive in the application.js.
+7. 	Create the `home` action in the page controller and also made the interface for it in `home.html.erb`
+8. 	Add the directive `resources: tasks, except: [:index]` to the `routes.db` file, the except part is because we don't need an index action due to that we are going to show our tasks on the home page.
+9. 	We need to generate the controller for task `rails generate controller tasks` and add the actions for new and create
+10. 	Install bootstrap for simple_forms `rails generate simple_form:install --bootstrap`
+11. 	Create the modal that is going to show the new task form using `simple_forms`
 
 # <a name="team-members"></a>Team Members
 * [Gustavo M. Marini](http://gustavommarini.com.ar "My personal Website (Under construction)")

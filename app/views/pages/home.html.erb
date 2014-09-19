@@ -1,0 +1,30 @@
+<div class="container" style="padding-top: 60px;">
+<h1>TASKS</h1>
+<% if @tasks.empty? %>
+	<div class="alert alert-info" role="alert">There are no tasks!</div>
+<% else %>
+	<br>
+	<div class="row">
+	    <div class="col-lg-12">
+	        <table class="table table-striped">
+	        	<tr>
+	                <td><h5><b>Title</b></h5></td>
+	                <td><h5><b>Created</b></h5></td>
+	                <td><h5><b>Deadline</b></h5></td>
+	                <td><h5><b>Completed</b></h5></td>	                
+	            </tr>
+	        	<% @tasks.each do |task| %>
+		            <tr>
+		                <td><%= task.title %></td>                
+		                <td><%= task.created_at %></td>
+		                <td><%= task.deadline %></td>
+		                <td>NO</td>
+		            	
+		            </tr>
+	            <% end %>
+	        </table>
+	    </div>
+	</div>
+<% end %>
+<!-- MODAL -->
+<div id="modal" class="modal fade"></div>
